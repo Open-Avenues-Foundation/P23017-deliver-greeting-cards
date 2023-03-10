@@ -1,5 +1,10 @@
 import { BrowserRouter, Routes, Route, Outlet, Link } from "react-router-dom";
 
+import CreateUser from './components/CreateUser';
+import ViewUsers from "./components/ViewUsers";
+import CreateEvent from './components/CreateEvent';
+import ViewEvents from './components/ViewEvents';
+
 function App() {
   return (
     <BrowserRouter>
@@ -32,18 +37,10 @@ function App() {
           <Route path="" element={
             <h1>Home</h1>
           } />
-          <Route path="create-user" element={
-            <h1>Create a User</h1>
-          } />
-          <Route path="view-users" element={
-            <h1>Contact Me</h1>
-          } />
-          <Route path="create-event" element={
-            <h1>Create an Event</h1>
-          } />
-          <Route path="view-events" element={
-            <h1>View Events</h1>
-          } />
+          <Route path="create-user" element={<CreateUser />} />
+          <Route path="view-users" element={<ViewUsers />}/>
+          <Route path="create-event" element={<CreateEvent />} />
+          <Route path="view-events" element={<ViewEvents />} />
         </Route>
       </Routes>
     </BrowserRouter>

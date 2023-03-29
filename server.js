@@ -5,6 +5,7 @@ const pg = require('pg');
 const app = express();
 app.use(bodyParser.json()) // for parsing application/json
 app.use(express.json());
+app.use(cors());
 
 const port = process.env.PORT || 3000;
 
